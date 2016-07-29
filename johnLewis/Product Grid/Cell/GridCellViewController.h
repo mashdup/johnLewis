@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface GridCellViewController : UIViewController
-
+@property (nonatomic, strong) void(^gridViewWillAppear)();
+- (void)setText:(NSString *)text andPrice:(NSString *)price;
+- (void)setImageURL:(NSString *)urlString;
 @end

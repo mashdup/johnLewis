@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GridCellViewController.h"
 
 @interface ProductGridTableViewCell : UITableViewCell
-- (id)initWithNumberOfColumns:(NSInteger)numberOfColumns reuseIdentifier:(NSString *)identifier;
+@property (nonatomic, assign) NSInteger numberOfColumns;
+@property (nonatomic, strong) void(^willDislpayGrid)(NSInteger gridPosition, UITableViewCell *gridCell, GridCellViewController *gridView);
 @end

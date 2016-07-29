@@ -9,17 +9,10 @@
 #import "ProductGridTableViewCell.h"
 
 @interface ProductGridTableViewCell()
-
+@property (nonatomic, strong) NSArray *gridViewArray;
 @end
 
 @implementation ProductGridTableViewCell
-
-- (id)initWithNumberOfColumns:(NSInteger)numberOfColumns reuseIdentifier:(NSString *)identifier{
-    if ((self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier])){
-        
-    }
-    return self;
-}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -34,6 +27,35 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
+    CGFloat gridWidth = self.bounds.size.width/_gridViewArray.count;
+    [_gridViewArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj isKindOfClass:[GridCellViewController class]]){
+            GridCellViewController *grid = obj;
+            grid.view.frame = CGRectMake(gridWidth*idx, 0, gridWidth, self.bounds.size.height);
+        }
+    }];
+}
+
+- (void)setNumberOfColumns:(NSInteger)numberOfColumns {
+    //Clear all subviews
+    [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [obj removeFromSuperview];
+    }];
+    
+    //Create new ones with desired number
+    _numberOfColumns = numberOfColumns;
+    NSMutableArray *gridViews = [NSMutableArray arrayWithCapacity:numberOfColumns];
+    for (int i = 0; i < numberOfColumns; i++){
+        GridCellViewController *grid = [GridCellViewController new];
+        [gridViews addObject:grid];
+        [self addSubview:grid.view];
+        
+        [grid setGridViewWillAppear:^{
+            if (_willDislpayGrid)
+                _willDislpayGrid(i,self,grid);
+        }];
+    }
+    _gridViewArray = gridViews;
 }
 
 @end

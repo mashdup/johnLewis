@@ -18,6 +18,8 @@
 		E05F348E1D4B684E00820BBF /* ProductGridTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E05F348D1D4B684E00820BBF /* ProductGridTableViewCell.m */; };
 		E05F34931D4B6A7000820BBF /* GridCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E05F34911D4B6A7000820BBF /* GridCellViewController.m */; };
 		E05F34941D4B6A7000820BBF /* GridCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05F34921D4B6A7000820BBF /* GridCellViewController.xib */; };
+		E05F34981D4BA2BF00820BBF /* CommsHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E05F34971D4BA2BF00820BBF /* CommsHandler.m */; };
+		E05F349C1D4BA82B00820BBF /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E05F349B1D4BA82B00820BBF /* ProductModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,10 @@
 		E05F34901D4B6A7000820BBF /* GridCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridCellViewController.h; path = "Product Grid/Cell/GridCellViewController.h"; sourceTree = "<group>"; };
 		E05F34911D4B6A7000820BBF /* GridCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridCellViewController.m; path = "Product Grid/Cell/GridCellViewController.m"; sourceTree = "<group>"; };
 		E05F34921D4B6A7000820BBF /* GridCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GridCellViewController.xib; path = "Product Grid/Cell/GridCellViewController.xib"; sourceTree = "<group>"; };
+		E05F34961D4BA2BF00820BBF /* CommsHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommsHandler.h; path = Comms/CommsHandler.h; sourceTree = "<group>"; };
+		E05F34971D4BA2BF00820BBF /* CommsHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommsHandler.m; path = Comms/CommsHandler.m; sourceTree = "<group>"; };
+		E05F349A1D4BA82B00820BBF /* ProductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductModel.h; path = "Product Grid/Model/ProductModel.h"; sourceTree = "<group>"; };
+		E05F349B1D4BA82B00820BBF /* ProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductModel.m; path = "Product Grid/Model/ProductModel.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,7 @@
 		E05F34661D4B5A1100820BBF /* johnLewis */ = {
 			isa = PBXGroup;
 			children = (
+				E05F34951D4BA29C00820BBF /* Comms */,
 				E05F34841D4B609800820BBF /* Product Grid */,
 				E05F346A1D4B5A1100820BBF /* AppDelegate.h */,
 				E05F346B1D4B5A1100820BBF /* AppDelegate.m */,
@@ -104,6 +111,7 @@
 		E05F34841D4B609800820BBF /* Product Grid */ = {
 			isa = PBXGroup;
 			children = (
+				E05F34991D4BA7E200820BBF /* Model */,
 				E05F348B1D4B678900820BBF /* Grid Cell */,
 				E05F34851D4B60E100820BBF /* ProductGridViewController.h */,
 				E05F34861D4B60E100820BBF /* ProductGridViewController.m */,
@@ -130,6 +138,24 @@
 				E05F34921D4B6A7000820BBF /* GridCellViewController.xib */,
 			);
 			name = "Grid Cell View";
+			sourceTree = "<group>";
+		};
+		E05F34951D4BA29C00820BBF /* Comms */ = {
+			isa = PBXGroup;
+			children = (
+				E05F34961D4BA2BF00820BBF /* CommsHandler.h */,
+				E05F34971D4BA2BF00820BBF /* CommsHandler.m */,
+			);
+			name = Comms;
+			sourceTree = "<group>";
+		};
+		E05F34991D4BA7E200820BBF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E05F349A1D4BA82B00820BBF /* ProductModel.h */,
+				E05F349B1D4BA82B00820BBF /* ProductModel.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,7 +252,9 @@
 				E05F346C1D4B5A1100820BBF /* AppDelegate.m in Sources */,
 				E05F34691D4B5A1100820BBF /* main.m in Sources */,
 				E05F348E1D4B684E00820BBF /* ProductGridTableViewCell.m in Sources */,
+				E05F34981D4BA2BF00820BBF /* CommsHandler.m in Sources */,
 				E05F34931D4B6A7000820BBF /* GridCellViewController.m in Sources */,
+				E05F349C1D4BA82B00820BBF /* ProductModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

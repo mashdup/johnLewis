@@ -9,7 +9,8 @@
 #import "GridCellViewController.h"
 
 @interface GridCellViewController ()
-
+@property (nonatomic, strong) IBOutlet UITextView *shortDescriptionText;
+@property (nonatomic, strong) IBOutlet UIImageView *productImageView;
 @end
 
 @implementation GridCellViewController
@@ -24,6 +25,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if (_gridViewWillAppear)
+        _gridViewWillAppear();
+}
+
+- (void)setText:(NSString *)text andPrice:(NSString *)price {
+    
+}
+
+- (void)setImageURL:(NSString *)urlString {
+    
+}
 /*
 #pragma mark - Navigation
 

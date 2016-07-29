@@ -3,10 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GridCellViewController">
             <connections>
+                <outlet property="productImageView" destination="NZ7-mS-HwT" id="HtE-Kg-edo"/>
+                <outlet property="shortDescriptionText" destination="KfN-xp-UC6" id="mTc-Sc-Dlx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,23 +18,27 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reu-11-0Xj">
-                    <rect key="frame" x="25" y="386" width="551" height="180"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NZ7-mS-HwT">
-                    <rect key="frame" x="8" y="8" width="584" height="379"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NZ7-mS-HwT">
+                    <rect key="frame" x="8" y="8" width="584" height="360"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9E-TK-ene">
-                    <rect key="frame" x="25" y="571" width="551" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfN-xp-UC6">
+                    <rect key="frame" x="16" y="368" width="568" height="224"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="NZ7-mS-HwT" secondAttribute="trailing" constant="8" id="9oT-CP-fdb"/>
+                <constraint firstItem="KfN-xp-UC6" firstAttribute="top" secondItem="NZ7-mS-HwT" secondAttribute="bottom" id="C3R-Uv-RAs"/>
+                <constraint firstItem="NZ7-mS-HwT" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.6" id="OJh-fE-lyd"/>
+                <constraint firstItem="NZ7-mS-HwT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Zgb-MK-nF1"/>
+                <constraint firstAttribute="trailing" secondItem="KfN-xp-UC6" secondAttribute="trailing" constant="16" id="a5w-m9-2Mp"/>
+                <constraint firstAttribute="bottom" secondItem="KfN-xp-UC6" secondAttribute="bottom" constant="8" id="oRo-ca-RHB"/>
+                <constraint firstItem="NZ7-mS-HwT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="t1F-ck-h3j"/>
+                <constraint firstItem="KfN-xp-UC6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="tCE-Zy-2B0"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
         </view>
     </objects>
