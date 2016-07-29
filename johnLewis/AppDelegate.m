@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ProductGridViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.window makeKeyAndVisible];
+    
+    ProductGridViewController *grid = [ProductGridViewController new];
+    UINavigationController *gridNavigation = [[UINavigationController alloc] initWithRootViewController:grid];
+    
+    NSDictionary *titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                         [UIColor lightGrayColor],NSForegroundColorAttributeName,[UIFont systemFontOfSize:19. weight:UIFontWeightThin],NSFontAttributeName,nil
+                                         ];
+    gridNavigation.navigationBar.titleTextAttributes = titleTextAttributes;
+    gridNavigation.navigationBar.translucent = NO;
+    gridNavigation.navigationBar.barTintColor = [UIColor colorWithRed:249./255. green:249./255. blue:249./255. alpha:1.];
+    
+    self.window.rootViewController = gridNavigation;
+    
     return YES;
 }
 

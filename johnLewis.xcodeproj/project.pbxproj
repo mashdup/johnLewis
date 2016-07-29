@@ -9,10 +9,15 @@
 /* Begin PBXBuildFile section */
 		E05F34691D4B5A1100820BBF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E05F34681D4B5A1100820BBF /* main.m */; };
 		E05F346C1D4B5A1100820BBF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E05F346B1D4B5A1100820BBF /* AppDelegate.m */; };
-		E05F346F1D4B5A1100820BBF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E05F346E1D4B5A1100820BBF /* ViewController.m */; };
-		E05F34721D4B5A1100820BBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E05F34701D4B5A1100820BBF /* Main.storyboard */; };
 		E05F34741D4B5A1100820BBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E05F34731D4B5A1100820BBF /* Assets.xcassets */; };
 		E05F34771D4B5A1100820BBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E05F34751D4B5A1100820BBF /* LaunchScreen.storyboard */; };
+		E05F347F1D4B5F4B00820BBF /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05F347E1D4B5F4B00820BBF /* AFNetworking.framework */; };
+		E05F34811D4B5F5800820BBF /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05F34801D4B5F5800820BBF /* JSONModel.framework */; };
+		E05F34881D4B60E100820BBF /* ProductGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E05F34861D4B60E100820BBF /* ProductGridViewController.m */; };
+		E05F34891D4B60E100820BBF /* ProductGridViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05F34871D4B60E100820BBF /* ProductGridViewController.xib */; };
+		E05F348E1D4B684E00820BBF /* ProductGridTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E05F348D1D4B684E00820BBF /* ProductGridTableViewCell.m */; };
+		E05F34931D4B6A7000820BBF /* GridCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E05F34911D4B6A7000820BBF /* GridCellViewController.m */; };
+		E05F34941D4B6A7000820BBF /* GridCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05F34921D4B6A7000820BBF /* GridCellViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +25,19 @@
 		E05F34681D4B5A1100820BBF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E05F346A1D4B5A1100820BBF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E05F346B1D4B5A1100820BBF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E05F346D1D4B5A1100820BBF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E05F346E1D4B5A1100820BBF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E05F34711D4B5A1100820BBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E05F34731D4B5A1100820BBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E05F34761D4B5A1100820BBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E05F34781D4B5A1100820BBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E05F347E1D4B5F4B00820BBF /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
+		E05F34801D4B5F5800820BBF /* JSONModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSONModel.framework; path = Carthage/Build/iOS/JSONModel.framework; sourceTree = "<group>"; };
+		E05F34851D4B60E100820BBF /* ProductGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductGridViewController.h; path = "Product Grid/ProductGridViewController.h"; sourceTree = "<group>"; };
+		E05F34861D4B60E100820BBF /* ProductGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductGridViewController.m; path = "Product Grid/ProductGridViewController.m"; sourceTree = "<group>"; };
+		E05F34871D4B60E100820BBF /* ProductGridViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductGridViewController.xib; path = "Product Grid/ProductGridViewController.xib"; sourceTree = "<group>"; };
+		E05F348C1D4B684E00820BBF /* ProductGridTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductGridTableViewCell.h; path = "Product Grid/Cell/ProductGridTableViewCell.h"; sourceTree = "<group>"; };
+		E05F348D1D4B684E00820BBF /* ProductGridTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductGridTableViewCell.m; path = "Product Grid/Cell/ProductGridTableViewCell.m"; sourceTree = "<group>"; };
+		E05F34901D4B6A7000820BBF /* GridCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridCellViewController.h; path = "Product Grid/Cell/GridCellViewController.h"; sourceTree = "<group>"; };
+		E05F34911D4B6A7000820BBF /* GridCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridCellViewController.m; path = "Product Grid/Cell/GridCellViewController.m"; sourceTree = "<group>"; };
+		E05F34921D4B6A7000820BBF /* GridCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GridCellViewController.xib; path = "Product Grid/Cell/GridCellViewController.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E05F34811D4B5F5800820BBF /* JSONModel.framework in Frameworks */,
+				E05F347F1D4B5F4B00820BBF /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +56,7 @@
 		E05F345B1D4B5A1100820BBF = {
 			isa = PBXGroup;
 			children = (
+				E05F34831D4B5FB400820BBF /* Third Party Frameworks */,
 				E05F34661D4B5A1100820BBF /* johnLewis */,
 				E05F34651D4B5A1100820BBF /* Products */,
 			);
@@ -58,11 +73,9 @@
 		E05F34661D4B5A1100820BBF /* johnLewis */ = {
 			isa = PBXGroup;
 			children = (
+				E05F34841D4B609800820BBF /* Product Grid */,
 				E05F346A1D4B5A1100820BBF /* AppDelegate.h */,
 				E05F346B1D4B5A1100820BBF /* AppDelegate.m */,
-				E05F346D1D4B5A1100820BBF /* ViewController.h */,
-				E05F346E1D4B5A1100820BBF /* ViewController.m */,
-				E05F34701D4B5A1100820BBF /* Main.storyboard */,
 				E05F34731D4B5A1100820BBF /* Assets.xcassets */,
 				E05F34751D4B5A1100820BBF /* LaunchScreen.storyboard */,
 				E05F34781D4B5A1100820BBF /* Info.plist */,
@@ -79,6 +92,46 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E05F34831D4B5FB400820BBF /* Third Party Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E05F34801D4B5F5800820BBF /* JSONModel.framework */,
+				E05F347E1D4B5F4B00820BBF /* AFNetworking.framework */,
+			);
+			name = "Third Party Frameworks";
+			sourceTree = "<group>";
+		};
+		E05F34841D4B609800820BBF /* Product Grid */ = {
+			isa = PBXGroup;
+			children = (
+				E05F348B1D4B678900820BBF /* Grid Cell */,
+				E05F34851D4B60E100820BBF /* ProductGridViewController.h */,
+				E05F34861D4B60E100820BBF /* ProductGridViewController.m */,
+				E05F34871D4B60E100820BBF /* ProductGridViewController.xib */,
+			);
+			name = "Product Grid";
+			sourceTree = "<group>";
+		};
+		E05F348B1D4B678900820BBF /* Grid Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E05F348F1D4B698700820BBF /* Grid Cell View */,
+				E05F348C1D4B684E00820BBF /* ProductGridTableViewCell.h */,
+				E05F348D1D4B684E00820BBF /* ProductGridTableViewCell.m */,
+			);
+			name = "Grid Cell";
+			sourceTree = "<group>";
+		};
+		E05F348F1D4B698700820BBF /* Grid Cell View */ = {
+			isa = PBXGroup;
+			children = (
+				E05F34901D4B6A7000820BBF /* GridCellViewController.h */,
+				E05F34911D4B6A7000820BBF /* GridCellViewController.m */,
+				E05F34921D4B6A7000820BBF /* GridCellViewController.xib */,
+			);
+			name = "Grid Cell View";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,6 +142,7 @@
 				E05F34601D4B5A1100820BBF /* Sources */,
 				E05F34611D4B5A1100820BBF /* Frameworks */,
 				E05F34621D4B5A1100820BBF /* Resources */,
+				E05F34821D4B5F5E00820BBF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -136,36 +190,49 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E05F34941D4B6A7000820BBF /* GridCellViewController.xib in Resources */,
 				E05F34771D4B5A1100820BBF /* LaunchScreen.storyboard in Resources */,
 				E05F34741D4B5A1100820BBF /* Assets.xcassets in Resources */,
-				E05F34721D4B5A1100820BBF /* Main.storyboard in Resources */,
+				E05F34891D4B60E100820BBF /* ProductGridViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E05F34821D4B5F5E00820BBF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/JSONModel.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AFNetworking.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E05F34601D4B5A1100820BBF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E05F346F1D4B5A1100820BBF /* ViewController.m in Sources */,
+				E05F34881D4B60E100820BBF /* ProductGridViewController.m in Sources */,
 				E05F346C1D4B5A1100820BBF /* AppDelegate.m in Sources */,
 				E05F34691D4B5A1100820BBF /* main.m in Sources */,
+				E05F348E1D4B684E00820BBF /* ProductGridTableViewCell.m in Sources */,
+				E05F34931D4B6A7000820BBF /* GridCellViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E05F34701D4B5A1100820BBF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E05F34711D4B5A1100820BBF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E05F34751D4B5A1100820BBF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -265,6 +332,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = johnLewis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.8bitDog.johnLewis;
@@ -276,6 +347,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = johnLewis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.8bitDog.johnLewis;

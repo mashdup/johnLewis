@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ProductGridViewController.h
 //  johnLewis
 //
 //  Created by Dillon Hoa on 29/07/2016.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ProductGridViewController : UIViewController
 
 @end
-
