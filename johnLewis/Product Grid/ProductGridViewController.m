@@ -71,7 +71,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return ceilf(_productsArray.count/_numberOfColumns);
+    return (int)ceil((float)_productsArray.count/(float)_numberOfColumns);
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -84,7 +84,7 @@
         cell = [[ProductGridTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
-    [cell setNumberOfColumns:4];
+    [cell setNumberOfColumns:_numberOfColumns];
     [cell setWillDislpayGrid:^(NSInteger indexOfGrid, UITableViewCell *gridCell, GridCellViewController *gridView) {
         //Set the data for the grid view
         NSInteger index = (indexPath.row * _numberOfColumns) + indexOfGrid;
@@ -94,6 +94,12 @@
             [gridView setImageURL:product.image];
         }
         
+    }];
+    [cell setGridDidTap:^(NSInteger indexOfGrid, UITableViewCell *gridCell, GridCellViewController *gridView) {
+         NSInteger index = (indexPath.row * _numberOfColumns) + indexOfGrid;
+        if (index < _productsArray.count){
+            ProductModel *product = _productsArray[index];
+        }
     }];
     
     return cell;

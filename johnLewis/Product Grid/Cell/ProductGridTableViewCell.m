@@ -54,6 +54,10 @@
             if (_willDislpayGrid)
                 _willDislpayGrid(i,self,_gridViewArray[i]);
         }];
+        [grid setGridDidTap:^{
+           if (_gridDidTap)
+               _gridDidTap(i,self,_gridViewArray[i]);
+        }];
     }
     _gridViewArray = gridViews;
 }

@@ -12,4 +12,5 @@
 @interface ProductGridTableViewCell : UITableViewCell
 @property (nonatomic, assign) NSInteger numberOfColumns;
 @property (nonatomic, strong) void(^willDislpayGrid)(NSInteger gridPosition, UITableViewCell *gridCell, GridCellViewController *gridView);
+@property (nonatomic, strong) void(^gridDidTap)(NSInteger gridPosition, UITableViewCell *gridCell, GridCellViewController *gridView);
 @end

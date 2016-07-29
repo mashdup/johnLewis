@@ -81,6 +81,7 @@
 			children = (
 				E05F34951D4BA29C00820BBF /* Comms */,
 				E05F34841D4B609800820BBF /* Product Grid */,
+				E05F349D1D4BBFCC00820BBF /* Product Page */,
 				E05F346A1D4B5A1100820BBF /* AppDelegate.h */,
 				E05F346B1D4B5A1100820BBF /* AppDelegate.m */,
 				E05F34731D4B5A1100820BBF /* Assets.xcassets */,
@@ -156,6 +157,13 @@
 				E05F349B1D4BA82B00820BBF /* ProductModel.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		E05F349D1D4BBFCC00820BBF /* Product Page */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Product Page";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
