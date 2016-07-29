@@ -45,7 +45,7 @@
                 }
             }];
             _productsArray = prods;
-            [self showLoadingLabel:NO];
+            [self performSelector:@selector(showLoadingLabel:) withObject:@NO afterDelay:0.2];
             [_tableView reloadData];
         }];
     }
@@ -60,7 +60,7 @@
     //Make sure animations are done on the Main Thread
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.view setNeedsUpdateConstraints];
-        [UIView animateKeyframesWithDuration:.6 delay:show?0.:.6 options:UIViewKeyframeAnimationOptionBeginFromCurrentState animations:^{
+        [UIView animateKeyframesWithDuration:.6 delay:show?0.:.3 options:UIViewKeyframeAnimationOptionBeginFromCurrentState animations:^{
             _loadingHeightContraint.constant = show ? 32 : 0;
             [self.view layoutIfNeeded];
         } completion:^(BOOL finished) {

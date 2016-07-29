@@ -3,18 +3,52 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductPageViewController">
             <connections>
-                <outlet property="view" destination="iN0-l3-epB" id="KX5-9X-b5p"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FU0-Xg-LEl">
+                    <rect key="frame" x="0.0" y="0.0" width="420" height="600"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ray-4V-I5p">
+                            <rect key="frame" x="0.0" y="0.0" width="420" height="600"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Ray-4V-I5p" secondAttribute="trailing" id="0l7-Dy-vE4"/>
+                        <constraint firstItem="Ray-4V-I5p" firstAttribute="leading" secondItem="FU0-Xg-LEl" secondAttribute="leading" id="D1V-hN-S7o"/>
+                        <constraint firstAttribute="bottom" secondItem="Ray-4V-I5p" secondAttribute="bottom" id="Tbk-XK-ltB"/>
+                        <constraint firstItem="Ray-4V-I5p" firstAttribute="top" secondItem="FU0-Xg-LEl" secondAttribute="top" id="i4N-i0-giv"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1iw-5b-Fw0">
+                    <rect key="frame" x="420" y="0.0" width="180" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="1iw-5b-Fw0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5vw-jh-zG3"/>
+                <constraint firstAttribute="bottom" secondItem="1iw-5b-Fw0" secondAttribute="bottom" id="8eu-Kl-sJV"/>
+                <constraint firstAttribute="bottom" secondItem="FU0-Xg-LEl" secondAttribute="bottom" id="Fuz-oy-rSE"/>
+                <constraint firstItem="1iw-5b-Fw0" firstAttribute="leading" secondItem="FU0-Xg-LEl" secondAttribute="trailing" id="LJh-Xj-Oag"/>
+                <constraint firstItem="FU0-Xg-LEl" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.7" id="Tz7-nr-2ia"/>
+                <constraint firstItem="FU0-Xg-LEl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="kox-th-MF5"/>
+                <constraint firstAttribute="trailing" secondItem="1iw-5b-Fw0" secondAttribute="trailing" id="rZB-yc-LaH"/>
+                <constraint firstItem="FU0-Xg-LEl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="v42-7f-eeS"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
         </view>
     </objects>
 </document>

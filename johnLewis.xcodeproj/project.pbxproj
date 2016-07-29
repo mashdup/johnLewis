@@ -21,8 +21,8 @@
 		E05F34981D4BA2BF00820BBF /* CommsHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E05F34971D4BA2BF00820BBF /* CommsHandler.m */; };
 		E05F349C1D4BA82B00820BBF /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E05F349B1D4BA82B00820BBF /* ProductModel.m */; };
 		E05F34A11D4BC0C100820BBF /* ProductPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E05F349F1D4BC0C100820BBF /* ProductPageViewController.m */; };
-		E05F34A21D4BC0C100820BBF /* ProductPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05F34A01D4BC0C100820BBF /* ProductPageViewController.xib */; };
-		E05F34A41D4BC58300820BBF /* ProductPageViewController-Landscape.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05F34A31D4BC58300820BBF /* ProductPageViewController-Landscape.xib */; };
+		E05F34A21D4BC0C100820BBF /* ProductPageViewController-Landscape.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05F34A01D4BC0C100820BBF /* ProductPageViewController-Landscape.xib */; };
+		E05F34A41D4BC58300820BBF /* ProductPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05F34A31D4BC58300820BBF /* ProductPageViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,8 +49,8 @@
 		E05F349B1D4BA82B00820BBF /* ProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductModel.m; path = "Product Grid/Model/ProductModel.m"; sourceTree = "<group>"; };
 		E05F349E1D4BC0C100820BBF /* ProductPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductPageViewController.h; path = "Product Page/ProductPageViewController.h"; sourceTree = "<group>"; };
 		E05F349F1D4BC0C100820BBF /* ProductPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductPageViewController.m; path = "Product Page/ProductPageViewController.m"; sourceTree = "<group>"; };
-		E05F34A01D4BC0C100820BBF /* ProductPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductPageViewController.xib; path = "Product Page/ProductPageViewController.xib"; sourceTree = "<group>"; };
-		E05F34A31D4BC58300820BBF /* ProductPageViewController-Landscape.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "ProductPageViewController-Landscape.xib"; path = "Product Page/ProductPageViewController-Landscape.xib"; sourceTree = "<group>"; };
+		E05F34A01D4BC0C100820BBF /* ProductPageViewController-Landscape.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "ProductPageViewController-Landscape.xib"; path = "Product Page/ProductPageViewController-Landscape.xib"; sourceTree = "<group>"; };
+		E05F34A31D4BC58300820BBF /* ProductPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductPageViewController.xib; path = "Product Page/ProductPageViewController.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,8 +171,8 @@
 			children = (
 				E05F349E1D4BC0C100820BBF /* ProductPageViewController.h */,
 				E05F349F1D4BC0C100820BBF /* ProductPageViewController.m */,
-				E05F34A01D4BC0C100820BBF /* ProductPageViewController.xib */,
-				E05F34A31D4BC58300820BBF /* ProductPageViewController-Landscape.xib */,
+				E05F34A01D4BC0C100820BBF /* ProductPageViewController-Landscape.xib */,
+				E05F34A31D4BC58300820BBF /* ProductPageViewController.xib */,
 			);
 			name = "Product Page";
 			sourceTree = "<group>";
@@ -236,11 +236,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E05F34941D4B6A7000820BBF /* GridCellViewController.xib in Resources */,
-				E05F34A21D4BC0C100820BBF /* ProductPageViewController.xib in Resources */,
+				E05F34A21D4BC0C100820BBF /* ProductPageViewController-Landscape.xib in Resources */,
 				E05F34771D4B5A1100820BBF /* LaunchScreen.storyboard in Resources */,
 				E05F34741D4B5A1100820BBF /* Assets.xcassets in Resources */,
 				E05F34891D4B60E100820BBF /* ProductGridViewController.xib in Resources */,
-				E05F34A41D4BC58300820BBF /* ProductPageViewController-Landscape.xib in Resources */,
+				E05F34A41D4BC58300820BBF /* ProductPageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
