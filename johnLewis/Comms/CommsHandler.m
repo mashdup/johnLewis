@@ -19,7 +19,7 @@
     [CommsHandler requestFromResource:@"products" action:@"search" queries:@[@"q=dishwasher",@"key=Wu1Xqn3vNrd1p7hqkvB6hEu0G9OrsYGb",@"pageSize=20"] completion:^(id response) {
         if ([response isKindOfClass:[NSDictionary class]]){
             //Would normally use an entity, but doing it quick for now.
-            completion(response[@"facets"]);
+            completion(response[@"products"]);
         }
     }];
 }
@@ -46,5 +46,6 @@
         completion(nil);
     }];
 }
+
 
 @end

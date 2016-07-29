@@ -9,10 +9,13 @@
 #import "ProductGridViewController.h"
 #import "ProductGridTableViewCell.h"
 #import "CommsHandler.h"
+#import "ProductModel.h"
 
 @interface ProductGridViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) IBOutlet NSLayoutConstraint *loadingHeightContraint;
+@property (nonatomic, strong) NSArray *productsArray;
+@property (nonatomic, assign) NSInteger numberOfColumns;
 @end
 
 @implementation ProductGridViewController
@@ -22,9 +25,9 @@
     self.title = @"Dishwashers";
     self.edgesForExtendedLayout = UIRectEdgeBottom;
     self.extendedLayoutIncludesOpaqueBars = YES;
-    
     _loadingHeightContraint.constant = 0;
-    // Do any additional setup after loading the view from its nib.
+    
+    _numberOfColumns = 4;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -32,8 +35,17 @@
     [self showLoadingLabel:YES];
     [CommsHandler getProductsWithCompletion:^(NSArray *products) {
         //Convert products into Models
-        
+        NSMutableArray *prods = [NSMutableArray array];
+        [products enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            if ([obj isKindOfClass:[NSDictionary class]]){
+                ProductModel *model = [[ProductModel alloc] initWithDictionary:obj error:nil];
+                if (model)
+                    [prods addObject:model];
+            }
+        }];
+        _productsArray = prods;
         [self showLoadingLabel:NO];
+        [_tableView reloadData];
     }];
 }
 
@@ -59,7 +71,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return ceilf(_productsArray.count/_numberOfColumns);
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -70,15 +82,23 @@
     ProductGridTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     if (!cell) {
         cell = [[ProductGridTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
-    
     [cell setNumberOfColumns:4];
     [cell setWillDislpayGrid:^(NSInteger indexOfGrid, UITableViewCell *gridCell, GridCellViewController *gridView) {
         //Set the data for the grid view
+        NSInteger index = (indexPath.row * _numberOfColumns) + indexOfGrid;
+        if (index < _productsArray.count){
+            ProductModel *product = _productsArray[index];
+            [gridView setText:product.title andPrice:product.price.now];
+            [gridView setImageURL:product.image];
+        }
         
     }];
     
     return cell;
 }
+
+
 
 @end

@@ -8,6 +8,9 @@
 
 #import "ProductModel.h"
 
+@implementation ProductPriceModel
+
+@end
 @implementation ProductModel
 
 @end

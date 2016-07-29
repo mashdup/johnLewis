@@ -10,6 +10,7 @@
 
 @interface GridCellViewController : UIViewController
 @property (nonatomic, strong) void(^gridViewWillAppear)();
+@property (nonatomic, strong) void(^gridDidTap)();
 - (void)setText:(NSString *)text andPrice:(NSString *)price;
 - (void)setImageURL:(NSString *)urlString;
 @end

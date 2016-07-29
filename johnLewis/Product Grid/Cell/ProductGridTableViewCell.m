@@ -52,7 +52,7 @@
         
         [grid setGridViewWillAppear:^{
             if (_willDislpayGrid)
-                _willDislpayGrid(i,self,grid);
+                _willDislpayGrid(i,self,_gridViewArray[i]);
         }];
     }
     _gridViewArray = gridViews;
