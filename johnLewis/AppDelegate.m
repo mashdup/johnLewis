@@ -29,6 +29,7 @@
     gridNavigation.navigationBar.titleTextAttributes = titleTextAttributes;
     gridNavigation.navigationBar.translucent = NO;
     gridNavigation.navigationBar.barTintColor = [UIColor colorWithRed:249./255. green:249./255. blue:249./255. alpha:1.];
+    gridNavigation.navigationBar.tintColor = [UIColor lightGrayColor];
     
     self.window.rootViewController = gridNavigation;
     

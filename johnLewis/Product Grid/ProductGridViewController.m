@@ -9,7 +9,7 @@
 #import "ProductGridViewController.h"
 #import "ProductGridTableViewCell.h"
 #import "CommsHandler.h"
-#import "ProductModel.h"
+#import "ProductPageViewController.h"
 
 @interface ProductGridViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
@@ -32,21 +32,24 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self showLoadingLabel:YES];
-    [CommsHandler getProductsWithCompletion:^(NSArray *products) {
-        //Convert products into Models
-        NSMutableArray *prods = [NSMutableArray array];
-        [products enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            if ([obj isKindOfClass:[NSDictionary class]]){
-                ProductModel *model = [[ProductModel alloc] initWithDictionary:obj error:nil];
-                if (model)
-                    [prods addObject:model];
-            }
+    if (!_productsArray){
+        [self showLoadingLabel:YES];
+        [CommsHandler getProductsWithCompletion:^(NSArray *products) {
+            //Convert products into Models
+            NSMutableArray *prods = [NSMutableArray array];
+            [products enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                if ([obj isKindOfClass:[NSDictionary class]]){
+                    ProductModel *model = [[ProductModel alloc] initWithDictionary:obj error:nil];
+                    if (model)
+                        [prods addObject:model];
+                }
+            }];
+            _productsArray = prods;
+            [self showLoadingLabel:NO];
+            [_tableView reloadData];
         }];
-        _productsArray = prods;
-        [self showLoadingLabel:NO];
-        [_tableView reloadData];
-    }];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,8 +59,10 @@
 - (void)showLoadingLabel:(BOOL)show {
     //Make sure animations are done on the Main Thread
     dispatch_async(dispatch_get_main_queue(), ^{
-        [UIView animateKeyframesWithDuration:.6 delay:show?0.:.5 options:UIViewKeyframeAnimationOptionBeginFromCurrentState animations:^{
+        [self.view setNeedsUpdateConstraints];
+        [UIView animateKeyframesWithDuration:.6 delay:show?0.:.6 options:UIViewKeyframeAnimationOptionBeginFromCurrentState animations:^{
             _loadingHeightContraint.constant = show ? 32 : 0;
+            [self.view layoutIfNeeded];
         } completion:^(BOOL finished) {
             
         }];
@@ -99,6 +104,9 @@
          NSInteger index = (indexPath.row * _numberOfColumns) + indexOfGrid;
         if (index < _productsArray.count){
             ProductModel *product = _productsArray[index];
+            ProductPageViewController *page = [ProductPageViewController new];
+            page.product = product;
+            [self.navigationController pushViewController:page animated:YES];
         }
     }];
     
