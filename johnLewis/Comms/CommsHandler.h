@@ -10,4 +10,5 @@
 
 @interface CommsHandler : NSObject
 + (void)getProductsWithCompletion:(void(^)(NSArray *products))completion;
+
 @end

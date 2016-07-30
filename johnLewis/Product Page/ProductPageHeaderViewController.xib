@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductPageHeaderViewController">
+            <connections>
+                <outlet property="pageControl" destination="G5O-Vr-0Qy" id="ELj-uL-Ylu"/>
+                <outlet property="scrollView" destination="gB5-tl-m0E" id="5MX-ig-aCw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gB5-tl-m0E">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="363"/>
+                    <color key="backgroundColor" red="0.64938121179999997" green="0.26274509800000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                </scrollView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="G5O-Vr-0Qy">
+                    <rect key="frame" x="0.0" y="363" width="600" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37" id="ogD-zm-OJ1"/>
+                    </constraints>
+                    <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="G5O-Vr-0Qy" firstAttribute="top" secondItem="gB5-tl-m0E" secondAttribute="bottom" id="8cq-Ik-wqJ"/>
+                <constraint firstAttribute="trailing" secondItem="G5O-Vr-0Qy" secondAttribute="trailing" id="Ge8-fM-mZ7"/>
+                <constraint firstItem="gB5-tl-m0E" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LzY-Gz-XKb"/>
+                <constraint firstAttribute="trailing" secondItem="gB5-tl-m0E" secondAttribute="trailing" id="XNu-gW-8qc"/>
+                <constraint firstAttribute="bottom" secondItem="G5O-Vr-0Qy" secondAttribute="bottom" id="gef-hK-JYR"/>
+                <constraint firstItem="gB5-tl-m0E" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="i3s-wF-G1C"/>
+                <constraint firstItem="G5O-Vr-0Qy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="klS-7Z-5wY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="432" y="274"/>
+        </view>
+    </objects>
+</document>

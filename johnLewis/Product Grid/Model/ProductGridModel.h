@@ -18,7 +18,7 @@
 @property (nonatomic, strong) NSString *was;
 @end
 
-@interface ProductModel : JSONModel
+@interface ProductGridModel : JSONModel
 @property (nonatomic, strong) NSArray <NSString *> *additionalServices;
 @property (nonatomic, strong) NSString *availabilityMessage;
 @property (nonatomic, assign) float averageRating;

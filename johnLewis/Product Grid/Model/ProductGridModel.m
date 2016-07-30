@@ -11,6 +11,6 @@
 @implementation ProductPriceModel
 
 @end
-@implementation ProductModel
+@implementation ProductGridModel
 
 @end

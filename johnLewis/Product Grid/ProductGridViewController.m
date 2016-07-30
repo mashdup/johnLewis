@@ -39,7 +39,7 @@
             NSMutableArray *prods = [NSMutableArray array];
             [products enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                 if ([obj isKindOfClass:[NSDictionary class]]){
-                    ProductModel *model = [[ProductModel alloc] initWithDictionary:obj error:nil];
+                    ProductGridModel *model = [[ProductGridModel alloc] initWithDictionary:obj error:nil];
                     if (model)
                         [prods addObject:model];
                 }
@@ -94,7 +94,7 @@
         //Set the data for the grid view
         NSInteger index = (indexPath.row * _numberOfColumns) + indexOfGrid;
         if (index < _productsArray.count){
-            ProductModel *product = _productsArray[index];
+            ProductGridModel *product = _productsArray[index];
             [gridView setText:product.title andPrice:product.price.now];
             [gridView setImageURL:product.image];
         }
@@ -103,9 +103,9 @@
     [cell setGridDidTap:^(NSInteger indexOfGrid, UITableViewCell *gridCell, GridCellViewController *gridView) {
          NSInteger index = (indexPath.row * _numberOfColumns) + indexOfGrid;
         if (index < _productsArray.count){
-            ProductModel *product = _productsArray[index];
+            ProductGridModel *product = _productsArray[index];
             ProductPageViewController *page = [ProductPageViewController new];
-            page.product = product;
+            page.gridProduct = product;
             [self.navigationController pushViewController:page animated:YES];
         }
     }];

@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductPageViewController">
             <connections>
+                <outlet property="tableView" destination="jkr-OB-xsL" id="z29-YL-pAb"/>
                 <outlet property="view" destination="iN0-l3-epB" id="KX5-9X-b5p"/>
             </connections>
         </placeholder>
@@ -14,7 +15,24 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jkr-OB-xsL" customClass="ProductTableView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="N9I-5e-m1v"/>
+                        <outlet property="delegate" destination="-1" id="e8p-ZD-QMe"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="jkr-OB-xsL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GqD-ia-oYR"/>
+                <constraint firstAttribute="bottom" secondItem="jkr-OB-xsL" secondAttribute="bottom" id="OcO-06-pq9"/>
+                <constraint firstAttribute="trailing" secondItem="jkr-OB-xsL" secondAttribute="trailing" id="lxf-hH-XTK"/>
+                <constraint firstItem="jkr-OB-xsL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="q7b-he-PTP"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
         </view>
     </objects>
 </document>

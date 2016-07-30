@@ -19,10 +19,12 @@
 		E05F34931D4B6A7000820BBF /* GridCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E05F34911D4B6A7000820BBF /* GridCellViewController.m */; };
 		E05F34941D4B6A7000820BBF /* GridCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05F34921D4B6A7000820BBF /* GridCellViewController.xib */; };
 		E05F34981D4BA2BF00820BBF /* CommsHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E05F34971D4BA2BF00820BBF /* CommsHandler.m */; };
-		E05F349C1D4BA82B00820BBF /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E05F349B1D4BA82B00820BBF /* ProductModel.m */; };
+		E05F349C1D4BA82B00820BBF /* ProductGridModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E05F349B1D4BA82B00820BBF /* ProductGridModel.m */; };
 		E05F34A11D4BC0C100820BBF /* ProductPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E05F349F1D4BC0C100820BBF /* ProductPageViewController.m */; };
 		E05F34A21D4BC0C100820BBF /* ProductPageViewController-Landscape.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05F34A01D4BC0C100820BBF /* ProductPageViewController-Landscape.xib */; };
 		E05F34A41D4BC58300820BBF /* ProductPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05F34A31D4BC58300820BBF /* ProductPageViewController.xib */; };
+		E05F34A81D4CA23400820BBF /* ProductPageHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E05F34A61D4CA23400820BBF /* ProductPageHeaderViewController.m */; };
+		E05F34A91D4CA23400820BBF /* ProductPageHeaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05F34A71D4CA23400820BBF /* ProductPageHeaderViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,12 +47,15 @@
 		E05F34921D4B6A7000820BBF /* GridCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GridCellViewController.xib; path = "Product Grid/Cell/GridCellViewController.xib"; sourceTree = "<group>"; };
 		E05F34961D4BA2BF00820BBF /* CommsHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommsHandler.h; path = Comms/CommsHandler.h; sourceTree = "<group>"; };
 		E05F34971D4BA2BF00820BBF /* CommsHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommsHandler.m; path = Comms/CommsHandler.m; sourceTree = "<group>"; };
-		E05F349A1D4BA82B00820BBF /* ProductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductModel.h; path = "Product Grid/Model/ProductModel.h"; sourceTree = "<group>"; };
-		E05F349B1D4BA82B00820BBF /* ProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductModel.m; path = "Product Grid/Model/ProductModel.m"; sourceTree = "<group>"; };
+		E05F349A1D4BA82B00820BBF /* ProductGridModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductGridModel.h; path = "Product Grid/Model/ProductGridModel.h"; sourceTree = "<group>"; };
+		E05F349B1D4BA82B00820BBF /* ProductGridModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductGridModel.m; path = "Product Grid/Model/ProductGridModel.m"; sourceTree = "<group>"; };
 		E05F349E1D4BC0C100820BBF /* ProductPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductPageViewController.h; path = "Product Page/ProductPageViewController.h"; sourceTree = "<group>"; };
 		E05F349F1D4BC0C100820BBF /* ProductPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductPageViewController.m; path = "Product Page/ProductPageViewController.m"; sourceTree = "<group>"; };
 		E05F34A01D4BC0C100820BBF /* ProductPageViewController-Landscape.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "ProductPageViewController-Landscape.xib"; path = "Product Page/ProductPageViewController-Landscape.xib"; sourceTree = "<group>"; };
 		E05F34A31D4BC58300820BBF /* ProductPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductPageViewController.xib; path = "Product Page/ProductPageViewController.xib"; sourceTree = "<group>"; };
+		E05F34A51D4CA23400820BBF /* ProductPageHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductPageHeaderViewController.h; path = "Product Page/ProductPageHeaderViewController.h"; sourceTree = "<group>"; };
+		E05F34A61D4CA23400820BBF /* ProductPageHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductPageHeaderViewController.m; path = "Product Page/ProductPageHeaderViewController.m"; sourceTree = "<group>"; };
+		E05F34A71D4CA23400820BBF /* ProductPageHeaderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductPageHeaderViewController.xib; path = "Product Page/ProductPageHeaderViewController.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,8 +165,8 @@
 		E05F34991D4BA7E200820BBF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E05F349A1D4BA82B00820BBF /* ProductModel.h */,
-				E05F349B1D4BA82B00820BBF /* ProductModel.m */,
+				E05F349A1D4BA82B00820BBF /* ProductGridModel.h */,
+				E05F349B1D4BA82B00820BBF /* ProductGridModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -169,6 +174,9 @@
 		E05F349D1D4BBFCC00820BBF /* Product Page */ = {
 			isa = PBXGroup;
 			children = (
+				E05F34A51D4CA23400820BBF /* ProductPageHeaderViewController.h */,
+				E05F34A61D4CA23400820BBF /* ProductPageHeaderViewController.m */,
+				E05F34A71D4CA23400820BBF /* ProductPageHeaderViewController.xib */,
 				E05F349E1D4BC0C100820BBF /* ProductPageViewController.h */,
 				E05F349F1D4BC0C100820BBF /* ProductPageViewController.m */,
 				E05F34A01D4BC0C100820BBF /* ProductPageViewController-Landscape.xib */,
@@ -236,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E05F34941D4B6A7000820BBF /* GridCellViewController.xib in Resources */,
+				E05F34A91D4CA23400820BBF /* ProductPageHeaderViewController.xib in Resources */,
 				E05F34A21D4BC0C100820BBF /* ProductPageViewController-Landscape.xib in Resources */,
 				E05F34771D4B5A1100820BBF /* LaunchScreen.storyboard in Resources */,
 				E05F34741D4B5A1100820BBF /* Assets.xcassets in Resources */,
@@ -274,9 +283,10 @@
 				E05F34691D4B5A1100820BBF /* main.m in Sources */,
 				E05F34A11D4BC0C100820BBF /* ProductPageViewController.m in Sources */,
 				E05F348E1D4B684E00820BBF /* ProductGridTableViewCell.m in Sources */,
+				E05F34A81D4CA23400820BBF /* ProductPageHeaderViewController.m in Sources */,
 				E05F34981D4BA2BF00820BBF /* CommsHandler.m in Sources */,
 				E05F34931D4B6A7000820BBF /* GridCellViewController.m in Sources */,
-				E05F349C1D4BA82B00820BBF /* ProductModel.m in Sources */,
+				E05F349C1D4BA82B00820BBF /* ProductGridModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

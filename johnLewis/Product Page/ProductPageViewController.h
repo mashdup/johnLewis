@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ProductModel.h"
+#import "ProductGridModel.h"
 
 @interface ProductPageViewController : UIViewController
-@property (nonatomic, strong) ProductModel *product;
+@property (nonatomic, strong) ProductGridModel *gridProduct;
 @end
