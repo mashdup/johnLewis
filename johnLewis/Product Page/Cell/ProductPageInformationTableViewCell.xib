@@ -16,16 +16,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJ5-Wl-D9J">
-                        <rect key="frame" x="8" y="8" width="304" height="217.5"/>
+                        <rect key="frame" x="8" y="0.0" width="304" height="225.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailingMargin" secondItem="XJ5-Wl-D9J" secondAttribute="trailing" id="NFT-Wd-gwN"/>
-                    <constraint firstAttribute="topMargin" secondItem="XJ5-Wl-D9J" secondAttribute="top" id="R9m-lC-NEy"/>
+                    <constraint firstAttribute="topMargin" secondItem="XJ5-Wl-D9J" secondAttribute="top" constant="8" id="R9m-lC-NEy"/>
                     <constraint firstAttribute="leadingMargin" secondItem="XJ5-Wl-D9J" secondAttribute="leading" id="YVe-f1-Zla"/>
                     <constraint firstAttribute="bottomMargin" secondItem="XJ5-Wl-D9J" secondAttribute="bottom" id="z7G-PL-GJ8"/>
                 </constraints>

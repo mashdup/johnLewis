@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ProductPageHeaderViewController : UIViewController
-
+- (void)setImages:(NSArray *)images;
 @end

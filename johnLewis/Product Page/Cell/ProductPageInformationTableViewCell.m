@@ -16,13 +16,16 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
+}
+
+- (void)setProductCode:(NSString *)code andDescription:(NSString *)description {
+    if (code && description)
+        _textView.text =[NSString stringWithFormat:@"Product code: %@\n%@",code,description];
 }
 
 @end

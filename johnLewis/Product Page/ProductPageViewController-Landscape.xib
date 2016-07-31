@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductPageViewController">
             <connections>
+                <outlet property="productServicesTextView" destination="adl-I8-fNt" id="lt3-YC-mJJ"/>
                 <outlet property="tableView" destination="Ray-4V-I5p" id="ccN-ir-CVO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,7 +21,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FU0-Xg-LEl">
                     <rect key="frame" x="0.0" y="0.0" width="420" height="600"/>
                     <subviews>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ray-4V-I5p" customClass="ProductTableView">
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ray-4V-I5p" customClass="ProductTableView">
                             <rect key="frame" x="0.0" y="0.0" width="420" height="600"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <connections>
@@ -39,7 +40,23 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1iw-5b-Fw0">
                     <rect key="frame" x="420" y="0.0" width="180" height="600"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="adl-I8-fNt">
+                            <rect key="frame" x="15" y="26" width="150" height="566"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="x8M-Fy-3Ci"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="adl-I8-fNt" secondAttribute="bottom" constant="8" id="JvV-JE-eGd"/>
+                        <constraint firstItem="adl-I8-fNt" firstAttribute="top" secondItem="1iw-5b-Fw0" secondAttribute="top" constant="26" id="UUn-Ca-qHi"/>
+                        <constraint firstItem="adl-I8-fNt" firstAttribute="centerX" secondItem="1iw-5b-Fw0" secondAttribute="centerX" id="YID-c1-H7T"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

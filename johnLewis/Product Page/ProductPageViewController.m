@@ -38,6 +38,7 @@
 @property (nonatomic, strong) IBOutlet ProductTableView *tableView;
 @property (nonatomic, strong) ProductPageHeaderViewController *productHeader;
 @property (nonatomic, strong) ProductPageModel *productModel;
+@property (nonatomic, strong) IBOutlet UITextView *productServicesTextView;
 @end
 
 @implementation ProductPageViewController
@@ -67,6 +68,13 @@
         if (model) {
             _productModel = model;
             [_tableView reloadData];
+            
+            //set the images for the header
+            if (_productHeader)
+                [_productHeader setImages:_productModel.media.images.urls];
+            
+            //Set guarantee  and price text
+            _productServicesTextView.attributedText = [self priceAndGuaranteeString];
         }
     }];
 }
@@ -77,6 +85,14 @@
     }
     _productHeader.view.frame = CGRectMake(0, 0, _tableView.bounds.size.width, 400);
     _tableView.tableHeaderView = _productHeader.view;
+    [_tableView reloadData];
+}
+
+- (NSAttributedString *)priceAndGuaranteeString {
+    NSMutableAttributedString *descString = [[NSMutableAttributedString alloc] initWithString:@""];
+    [descString appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"£%@\n",_productModel.price.now] attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:24. weight:UIFontWeightBold]}]];
+    [descString appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@",_productModel.title] attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16. weight:UIFontWeightRegular]}]];
+    return descString;
 }
 
 #pragma mark - Switch interface from orientation
@@ -131,6 +147,10 @@
     return 44;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 44;
+}
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *labelView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 44)];
     labelView.backgroundColor = [UIColor whiteColor];
@@ -164,7 +184,7 @@
                     }
                 }
             }
-            
+            [cell setProductCode:_productModel.code andDescription:_productModel.details.productInformation];
             return cell;
         }
         
@@ -186,6 +206,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SpecificiationCell"];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"SpecificiationCell"];
+        cell.textLabel.font = [UIFont systemFontOfSize:15. weight:UIFontWeightRegular];
+        cell.textLabel.textColor = [UIColor darkGrayColor];
     }
     if (_productModel){
         ProductFeaturesModel *feature = _productModel.details.features.firstObject;

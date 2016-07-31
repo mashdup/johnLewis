@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ProductPageInformationTableViewCell : UITableViewCell
-
+- (void)setProductCode:(NSString *)code andDescription:(NSString *)description;
 @end
