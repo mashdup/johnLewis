@@ -75,6 +75,7 @@
             
             //Set guarantee  and price text
             _productServicesTextView.attributedText = [self priceAndGuaranteeString];
+            [_productHeader setAdditionalServicesText:[self priceAndGuaranteeString]];
         }
     }];
 }
@@ -85,13 +86,26 @@
     }
     _productHeader.view.frame = CGRectMake(0, 0, _tableView.bounds.size.width, 400);
     _tableView.tableHeaderView = _productHeader.view;
+    
     [_tableView reloadData];
+    
+    if (!_productModel)return;
+    _productServicesTextView.attributedText = [self priceAndGuaranteeString];
+    [_productHeader setAdditionalServicesText:[self priceAndGuaranteeString]];
 }
 
 - (NSAttributedString *)priceAndGuaranteeString {
     NSMutableAttributedString *descString = [[NSMutableAttributedString alloc] initWithString:@""];
     [descString appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"£%@\n",_productModel.price.now] attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:24. weight:UIFontWeightBold]}]];
-    [descString appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@",_productModel.title] attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16. weight:UIFontWeightRegular]}]];
+    if (_productModel.displaySpecialOffer.length > 0)
+        [descString appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@\n",_productModel.displaySpecialOffer] attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14. weight:UIFontWeightRegular],NSForegroundColorAttributeName:[UIColor colorWithRed:170./255. green:43./255. blue:43./255. alpha:1.]}]];
+    
+    [_productModel.additionalServices.includedServices enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj isKindOfClass:[NSString class]]){
+            
+            [descString appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@\n",obj] attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16. weight:UIFontWeightRegular],NSForegroundColorAttributeName:[UIColor darkGrayColor]}]];
+        }
+    }];
     return descString;
 }
 

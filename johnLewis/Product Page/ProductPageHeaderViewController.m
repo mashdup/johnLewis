@@ -89,6 +89,8 @@
 @property (nonatomic, strong) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, strong) IBOutlet UIPageControl *pageControl;
 @property (nonatomic, strong) NSArray *imageViewArray;
+@property (nonatomic, strong) IBOutlet UITextView *textView;
+@property (nonatomic, strong) IBOutlet NSLayoutConstraint *additionalServicesConstraint;
 @end
 
 @implementation ProductPageHeaderViewController
@@ -98,6 +100,10 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -105,6 +111,21 @@
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
+    [self switchInterface:[[UIApplication sharedApplication] statusBarOrientation]];
+    [_imageViewArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj isKindOfClass:[ProductHeaderImageViewController class]]){
+            ProductHeaderImageViewController *imageController = obj;
+            imageController.view.frame = CGRectMake(_scrollView.bounds.size.width * idx,
+                                                    0,
+                                                    _scrollView.bounds.size.width,
+                                                    _scrollView.bounds.size.height);
+        }
+    }];
+    _scrollView.contentSize = CGSizeMake(_scrollView.bounds.size.width * _imageViewArray.count, _scrollView.bounds.size.height);
+    CGRect frame = _scrollView.frame;
+    frame.origin.x = frame.size.width * _pageControl.currentPage;
+    frame.origin.y = 0;
+    [_scrollView scrollRectToVisible:frame animated:NO];
 }
 
 - (void)setImages:(NSArray *)images {
@@ -124,6 +145,30 @@
     }];
     _scrollView.contentSize = CGSizeMake(_scrollView.bounds.size.width * images.count, _scrollView.bounds.size.height);
     _imageViewArray = imageViews;
+}
+
+- (void)setAdditionalServicesText:(NSAttributedString *)attrString {
+    _textView.attributedText = attrString;
+}
+
+#pragma mark - Orientation methods
+
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [self switchInterface:toInterfaceOrientation];
+    
+}
+
+- (void)switchInterface:(UIInterfaceOrientation)orientation {
+    if( UIInterfaceOrientationIsLandscape(orientation) )
+    {
+        _additionalServicesConstraint.constant = 0.;
+        
+    }
+    else
+    {
+        _additionalServicesConstraint.constant = 100.;
+    }
 }
 
 #pragma mark - page control methods

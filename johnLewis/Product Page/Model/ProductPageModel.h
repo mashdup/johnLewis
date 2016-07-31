@@ -54,6 +54,7 @@
 @end
 
 @interface ProductPageModel : JSONModel
+@property (nonatomic, strong) ProductAdditionalServicesModel *additionalServices;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) ProductDetailsModel *details;
 @property (nonatomic, strong) ProductMediaModel *media;

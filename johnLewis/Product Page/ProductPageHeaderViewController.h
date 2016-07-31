@@ -10,4 +10,5 @@
 
 @interface ProductPageHeaderViewController : UIViewController
 - (void)setImages:(NSArray *)images;
+- (void)setAdditionalServicesText:(NSAttributedString *)attrString;
 @end

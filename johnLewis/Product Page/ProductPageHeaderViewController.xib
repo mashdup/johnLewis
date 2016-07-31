@@ -7,24 +7,26 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductPageHeaderViewController">
             <connections>
+                <outlet property="additionalServicesConstraint" destination="wUO-Zz-KEn" id="Ejw-Pv-U8B"/>
                 <outlet property="pageControl" destination="G5O-Vr-0Qy" id="ELj-uL-Ylu"/>
                 <outlet property="scrollView" destination="gB5-tl-m0E" id="5MX-ig-aCw"/>
+                <outlet property="textView" destination="IjQ-h2-5H2" id="Ouf-GF-bCq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
+            <rect key="frame" x="0.0" y="0.0" width="600" height="496"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gB5-tl-m0E">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="363"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="371"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="11o-AU-n2d"/>
                     </connections>
                 </scrollView>
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="G5O-Vr-0Qy">
-                    <rect key="frame" x="0.0" y="363" width="600" height="37"/>
+                    <rect key="frame" x="0.0" y="371" width="600" height="37"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="37" id="ogD-zm-OJ1"/>
                     </constraints>
@@ -34,19 +36,49 @@
                         <action selector="pageControlDidChange:" destination="-1" eventType="valueChanged" id="3Na-Vt-21t"/>
                     </connections>
                 </pageControl>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVL-dt-fuq">
+                    <rect key="frame" x="0.0" y="408" width="600" height="88"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jCA-UX-uHr">
+                            <rect key="frame" x="0.0" y="8" width="600" height="80"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IjQ-h2-5H2">
+                            <rect key="frame" x="8" y="16" width="584" height="72"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="jCA-UX-uHr" firstAttribute="top" secondItem="CVL-dt-fuq" secondAttribute="top" constant="8" id="3P4-gh-im7"/>
+                        <constraint firstItem="IjQ-h2-5H2" firstAttribute="top" secondItem="CVL-dt-fuq" secondAttribute="top" constant="16" id="5mB-Tu-GSy"/>
+                        <constraint firstItem="jCA-UX-uHr" firstAttribute="leading" secondItem="CVL-dt-fuq" secondAttribute="leading" id="6FL-hx-FJJ"/>
+                        <constraint firstItem="IjQ-h2-5H2" firstAttribute="leading" secondItem="CVL-dt-fuq" secondAttribute="leading" constant="8" id="JFj-85-gmh"/>
+                        <constraint firstAttribute="bottom" secondItem="jCA-UX-uHr" secondAttribute="bottom" id="U5Y-Do-Yis"/>
+                        <constraint firstAttribute="bottom" secondItem="IjQ-h2-5H2" secondAttribute="bottom" id="dSX-Ww-Ixm"/>
+                        <constraint firstAttribute="trailing" secondItem="jCA-UX-uHr" secondAttribute="trailing" id="gKl-pN-MLU"/>
+                        <constraint firstAttribute="trailing" secondItem="IjQ-h2-5H2" secondAttribute="trailing" constant="8" id="mfU-Xc-wav"/>
+                        <constraint firstAttribute="height" constant="88" id="wUO-Zz-KEn"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="CVL-dt-fuq" secondAttribute="bottom" id="0vE-Ga-qWb"/>
                 <constraint firstItem="G5O-Vr-0Qy" firstAttribute="top" secondItem="gB5-tl-m0E" secondAttribute="bottom" id="8cq-Ik-wqJ"/>
                 <constraint firstAttribute="trailing" secondItem="G5O-Vr-0Qy" secondAttribute="trailing" id="Ge8-fM-mZ7"/>
                 <constraint firstItem="gB5-tl-m0E" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LzY-Gz-XKb"/>
                 <constraint firstAttribute="trailing" secondItem="gB5-tl-m0E" secondAttribute="trailing" id="XNu-gW-8qc"/>
-                <constraint firstAttribute="bottom" secondItem="G5O-Vr-0Qy" secondAttribute="bottom" id="gef-hK-JYR"/>
+                <constraint firstAttribute="trailing" secondItem="CVL-dt-fuq" secondAttribute="trailing" id="eHe-Rt-hJU"/>
+                <constraint firstItem="CVL-dt-fuq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fao-Ym-J8Q"/>
                 <constraint firstItem="gB5-tl-m0E" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="i3s-wF-G1C"/>
                 <constraint firstItem="G5O-Vr-0Qy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="klS-7Z-5wY"/>
+                <constraint firstItem="CVL-dt-fuq" firstAttribute="top" secondItem="G5O-Vr-0Qy" secondAttribute="bottom" id="rxB-UW-yTe"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="432" y="274"/>
+            <point key="canvasLocation" x="432" y="322"/>
         </view>
     </objects>
 </document>
