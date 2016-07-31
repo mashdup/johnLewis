@@ -15,7 +15,9 @@
 
 @interface ProductTableView : UITableView
 @end
-
+/* 
+ Subclassing the table view allows us to set the table headerview frame properly
+ */
 @implementation ProductTableView : UITableView
 
 - (void)layoutSubviews {

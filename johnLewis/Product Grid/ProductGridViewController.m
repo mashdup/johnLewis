@@ -101,6 +101,7 @@
         
     }];
     [cell setGridDidTap:^(NSInteger indexOfGrid, UITableViewCell *gridCell, GridCellViewController *gridView) {
+        // Once the gridview is tapped, we get the index of the grid and add it to the row to select the product from the array.
          NSInteger index = (indexPath.row * _numberOfColumns) + indexOfGrid;
         if (index < _productsArray.count){
             ProductGridModel *product = _productsArray[index];

@@ -15,6 +15,11 @@
 @property (nonatomic, strong) NSURLSessionDataTask *sessionTask;
 @end
 
+/*
+ This view controller helps loading the images using the lazy loading adapted from Apple's lazy loading sample
+ Each controller will handle an image and it's view
+ */
+
 @implementation ProductHeaderImageViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,7 +28,6 @@
         _imageView.contentMode = UIViewContentModeScaleAspectFit;
         [self.view addSubview:_imageView];
     }
-    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -35,7 +39,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)viewDidLayoutSubviews {
@@ -95,20 +98,6 @@
 
 @implementation ProductPageHeaderViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     [self switchInterface:[[UIApplication sharedApplication] statusBarOrientation]];
@@ -129,6 +118,9 @@
 }
 
 - (void)setImages:(NSArray *)images {
+    /*
+     Setting the images also sets up the scroll view with custom view controllers. It also sets the initial scrollview content size.
+     */
     _pageControl.numberOfPages = images.count;
     NSMutableArray *imageViews = [NSMutableArray arrayWithCapacity:images.count];
     [images enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -160,6 +152,11 @@
 }
 
 - (void)switchInterface:(UIInterfaceOrientation)orientation {
+    /*
+     This is to set the height of the additional text.
+     0 will hide the text
+     100 is the set height of the additonal text. Can be adjusted to size of the text at later date.
+     */
     if( UIInterfaceOrientationIsLandscape(orientation) )
     {
         _additionalServicesConstraint.constant = 0.;
