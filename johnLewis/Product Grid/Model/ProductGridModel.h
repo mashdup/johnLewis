@@ -8,15 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <JSONModel/JSONModel.h>
+#import "ProductPageModel.h"
 
-@interface ProductPriceModel : JSONModel
-@property (nonatomic, strong) NSString *currency;
-@property (nonatomic, strong) NSString *now;
-@property (nonatomic, strong) NSString *then1;
-@property (nonatomic, strong) NSString *uom;
-@property (nonatomic, strong) NSString *then2;
-@property (nonatomic, strong) NSString *was;
-@end
 
 @interface ProductGridModel : JSONModel
 @property (nonatomic, strong) NSArray <NSString *> *additionalServices;

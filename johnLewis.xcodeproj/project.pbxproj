@@ -25,6 +25,9 @@
 		E05F34A41D4BC58300820BBF /* ProductPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05F34A31D4BC58300820BBF /* ProductPageViewController.xib */; };
 		E05F34A81D4CA23400820BBF /* ProductPageHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E05F34A61D4CA23400820BBF /* ProductPageHeaderViewController.m */; };
 		E05F34A91D4CA23400820BBF /* ProductPageHeaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05F34A71D4CA23400820BBF /* ProductPageHeaderViewController.xib */; };
+		E05F34B11D4E1AC800820BBF /* ProductPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E05F34B01D4E1AC800820BBF /* ProductPageModel.m */; };
+		E05F34B51D4E220100820BBF /* ProductPageInformationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E05F34B41D4E220100820BBF /* ProductPageInformationTableViewCell.m */; };
+		E05F34B71D4E275C00820BBF /* ProductPageInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05F34B61D4E275C00820BBF /* ProductPageInformationTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,11 @@
 		E05F34A51D4CA23400820BBF /* ProductPageHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductPageHeaderViewController.h; path = "Product Page/ProductPageHeaderViewController.h"; sourceTree = "<group>"; };
 		E05F34A61D4CA23400820BBF /* ProductPageHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductPageHeaderViewController.m; path = "Product Page/ProductPageHeaderViewController.m"; sourceTree = "<group>"; };
 		E05F34A71D4CA23400820BBF /* ProductPageHeaderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductPageHeaderViewController.xib; path = "Product Page/ProductPageHeaderViewController.xib"; sourceTree = "<group>"; };
+		E05F34AF1D4E1AC800820BBF /* ProductPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductPageModel.h; path = "Product Page/Model/ProductPageModel.h"; sourceTree = "<group>"; };
+		E05F34B01D4E1AC800820BBF /* ProductPageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductPageModel.m; path = "Product Page/Model/ProductPageModel.m"; sourceTree = "<group>"; };
+		E05F34B31D4E220100820BBF /* ProductPageInformationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductPageInformationTableViewCell.h; path = "Product Page/Cell/ProductPageInformationTableViewCell.h"; sourceTree = "<group>"; };
+		E05F34B41D4E220100820BBF /* ProductPageInformationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductPageInformationTableViewCell.m; path = "Product Page/Cell/ProductPageInformationTableViewCell.m"; sourceTree = "<group>"; };
+		E05F34B61D4E275C00820BBF /* ProductPageInformationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductPageInformationTableViewCell.xib; path = "Product Page/Cell/ProductPageInformationTableViewCell.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,15 +182,44 @@
 		E05F349D1D4BBFCC00820BBF /* Product Page */ = {
 			isa = PBXGroup;
 			children = (
-				E05F34A51D4CA23400820BBF /* ProductPageHeaderViewController.h */,
-				E05F34A61D4CA23400820BBF /* ProductPageHeaderViewController.m */,
-				E05F34A71D4CA23400820BBF /* ProductPageHeaderViewController.xib */,
+				E05F34B21D4E21D600820BBF /* Cells */,
+				E05F34AE1D4E1AAC00820BBF /* Page Header */,
+				E05F34AD1D4E1A9C00820BBF /* Model */,
 				E05F349E1D4BC0C100820BBF /* ProductPageViewController.h */,
 				E05F349F1D4BC0C100820BBF /* ProductPageViewController.m */,
 				E05F34A01D4BC0C100820BBF /* ProductPageViewController-Landscape.xib */,
 				E05F34A31D4BC58300820BBF /* ProductPageViewController.xib */,
 			);
 			name = "Product Page";
+			sourceTree = "<group>";
+		};
+		E05F34AD1D4E1A9C00820BBF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E05F34AF1D4E1AC800820BBF /* ProductPageModel.h */,
+				E05F34B01D4E1AC800820BBF /* ProductPageModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E05F34AE1D4E1AAC00820BBF /* Page Header */ = {
+			isa = PBXGroup;
+			children = (
+				E05F34A51D4CA23400820BBF /* ProductPageHeaderViewController.h */,
+				E05F34A61D4CA23400820BBF /* ProductPageHeaderViewController.m */,
+				E05F34A71D4CA23400820BBF /* ProductPageHeaderViewController.xib */,
+			);
+			name = "Page Header";
+			sourceTree = "<group>";
+		};
+		E05F34B21D4E21D600820BBF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E05F34B31D4E220100820BBF /* ProductPageInformationTableViewCell.h */,
+				E05F34B41D4E220100820BBF /* ProductPageInformationTableViewCell.m */,
+				E05F34B61D4E275C00820BBF /* ProductPageInformationTableViewCell.xib */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +287,7 @@
 				E05F34741D4B5A1100820BBF /* Assets.xcassets in Resources */,
 				E05F34891D4B60E100820BBF /* ProductGridViewController.xib in Resources */,
 				E05F34A41D4BC58300820BBF /* ProductPageViewController.xib in Resources */,
+				E05F34B71D4E275C00820BBF /* ProductPageInformationTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,8 +318,10 @@
 			files = (
 				E05F34881D4B60E100820BBF /* ProductGridViewController.m in Sources */,
 				E05F346C1D4B5A1100820BBF /* AppDelegate.m in Sources */,
+				E05F34B11D4E1AC800820BBF /* ProductPageModel.m in Sources */,
 				E05F34691D4B5A1100820BBF /* main.m in Sources */,
 				E05F34A11D4BC0C100820BBF /* ProductPageViewController.m in Sources */,
+				E05F34B51D4E220100820BBF /* ProductPageInformationTableViewCell.m in Sources */,
 				E05F348E1D4B684E00820BBF /* ProductGridTableViewCell.m in Sources */,
 				E05F34A81D4CA23400820BBF /* ProductPageHeaderViewController.m in Sources */,
 				E05F34981D4BA2BF00820BBF /* CommsHandler.m in Sources */,

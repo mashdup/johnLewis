@@ -24,6 +24,12 @@
     }];
 }
 
++ (void)getProductWithId:(NSString *)idString completion:(void(^)(NSDictionary *productDictionary))completion{
+    [CommsHandler requestFromResource:@"products" action:idString queries:@[@"key=Wu1Xqn3vNrd1p7hqkvB6hEu0G9OrsYGb"] completion:^(id response) {
+        completion(response);
+    }];
+}
+
 
 + (void)requestFromResource:(NSString *)resource action:(NSString *)action queries:(NSArray *)queries completion:(void(^)(id response))completion{
     NSURLComponents *componentURL = [NSURLComponents componentsWithString:@"https://api.johnlewis.com"];

@@ -6,11 +6,9 @@
 //  Copyright © 2016 8bitDog. All rights reserved.
 //
 
-#import "ProductModel.h"
+#import "ProductGridModel.h"
 
-@implementation ProductPriceModel
 
-@end
 @implementation ProductGridModel
 
 @end
