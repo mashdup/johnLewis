@@ -18,7 +18,5 @@ DerivedData
 .DS_Store
 build/
 Pods
-Carthage/Build
-Carthage/Checkouts
 .irb-history
 *.lock
