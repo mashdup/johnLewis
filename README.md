@@ -23,3 +23,8 @@ I am using [Carthage](https://github.com/Carthage/Carthage) as a third party dep
     }];
 }
 ```
+* Because I wanted to make this responsive for iPhones too (not required for this test), I made the product list to allow defined number of columns. By setting 1 variable, we can define how many columns of products. So for iPhone we could use 2, iPad Portrait 4 and iPad Landscape 6. There is no limit to the number of columns and each grid position will adjust accordingly. Number of columns is found in ProductGridViewController.m.
+```objective-c
+_numberOfColumns = 4;
+}
+```
