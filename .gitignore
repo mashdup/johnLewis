@@ -1,6 +1,5 @@
 # Xcode
 .DS_Store
-build/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -16,7 +15,6 @@ profile
 *.moved-aside
 DerivedData
 .DS_Store
-build/
 Pods
 .irb-history
 *.lock
